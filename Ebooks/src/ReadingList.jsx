@@ -1,7 +1,7 @@
+import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import image from './assets/home.jpeg';
 import Card from './Card.jsx';
-import { useState, useRef, useEffect } from 'react';
 
 export default function ReadingList() {
     const navigate = useNavigate();
@@ -40,7 +40,7 @@ export default function ReadingList() {
                     <p className='text-3xl font-medium'>My Reading List</p>
                 </div>
 
-                <div className="relative" >
+                <div className="relative">
                 <button
                   className="cursor-pointer bg-white mt-2"
                   onClick={() => setMenuOpen((open) => !open)}
@@ -53,20 +53,21 @@ export default function ReadingList() {
                 </button>
 
                 {menuOpen && (
-                  <div className="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                  <div className="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 z-50"      
+                  >
                     <ul className="py-1 text-sm text-gray-700">
                       <li>
                         <Link
-                          to="/profile"
+                          to="/Profile"
                           className="block px-4 py-2 hover:bg-gray-100 rounded-xl"
-                          onClick={() => setMenuOpen(false)}
+                          onClick={() => setMenuOpen(true)}
                         >
                           Profile
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to="/settings"
+                          to="/Settings"
                           className="block px-4 py-2 hover:bg-gray-100 rounded-xl"
                           onClick={() => setMenuOpen(false)}
                         >
@@ -77,7 +78,7 @@ export default function ReadingList() {
                         <Link
                           to="/Login"
                           className="block px-4 py-2 hover:bg-gray-100 rounded-xl"
-                          onClick={() => setMenuOpen(false)}
+                          onClick={() => setMenuOpen(true)}
                         >
                           Logout
                         </Link>
